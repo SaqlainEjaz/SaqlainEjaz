@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saqlain Hub - Home</title><link rel="stylesheet" href="/style.css">
+    <title>Saqlain Hub - Home</title><link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <nav>
         <div class="menu">
             <input type="checkbox" id="check">
             <div class="logo"><a href="#">Saqlain Hub</a></div>
+            <div class="font-effect-emboss" id = "digital-clock"></div>
             <ul>
                 <label class="btn cancel" for="check">
                     <i class="fa-solid fa-xmark"></i>
                 </label>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">contact Us</a></li>
@@ -24,5 +26,64 @@
             <label class="btn bars" for="check"><i class="fa-solid fa-bars"></i></label>
         </div>
     </nav>
+<script>
+
+function Time() {
+
+  // Creating object of the Date class
+  var date = new Date();
+
+  // Get current hour
+  var hour = date.getHours();
+  // Get current minute
+  var minute = date.getMinutes();
+  // Get current second
+  var second = date.getSeconds();
+
+  // Variable to store AM / PM
+  var period = "";
+
+  // Assigning AM / PM according to current hour
+  if (hour >= 12) {
+    period = "PM";
+  } else {
+    period = "AM";
+  }
+
+  // Converting the hour in 12-hour format
+  if (hour == 0) {
+    hour = 12;
+  } else {
+    if (hour > 12) {
+      hour = hour - 12;
+    }
+  }
+
+  // Updating hour, minute, and second
+  // if they are less than 10
+  hour = update(hour);
+  minute = update(minute);
+  second = update(second);
+
+  // Adding time elements to the div
+  document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
+
+  // Set Timer to 1 sec (1000 ms)
+  setTimeout(Time, 1000);
+}
+
+// Function to update time elements if they are less than 10
+// Append 0 before time elements if they are less than 10
+function update(t) {
+  if (t < 10) {
+    return "0" + t;
+  }
+  else {
+    return t;
+  }
+}
+
+Time();
+</script>
 </body>
 </html>
