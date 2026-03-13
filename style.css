@@ -30,7 +30,7 @@ nav .menu {
 }
 
 .menu .logo a{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     text-decoration: none;
     color: #31344b;
@@ -148,7 +148,7 @@ nav label.cancel{
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: "Audiowide", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   color: #31344b;
   box-shadow: -3px -3px 7px 0 rgba(0, 0, 0, 0.2), 3px 3px 5px 0 rgba(0, 0, 0, 0.19);
