@@ -140,17 +140,20 @@ nav label.cancel{
 
 }
 
+.clock-container {
+   padding: 10px;
+   border: 2px solid #333;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   font-size: .85em;
+
+}
+
 .font-effect-emboss {
-  background-color:  #ecf0f3;
-  border-radius: 10px;
-  width: 35%;
-  margin: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-family: "Audiowide", sans-serif;
-  font-size: 18px;
-  text-align: center;
-  color: #31344b;
-  box-shadow: -3px -3px 7px 0 rgba(0, 0, 0, 0.2), 3px 3px 5px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+#date-display {
 
 }

@@ -1,3 +1,4 @@
+// Digital Clock
 function Time() {
 
   // Creating object of the Date class
@@ -54,3 +55,30 @@ function update(t) {
 }
 
 Time();
+
+// Date
+function updateDate() {
+  // Create a new date object to get the current date
+  const today = new Date();
+
+  // Format the date into a human-readable string
+  const formattedDate = today.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  // Get the element by its ID
+  const dataElement = document.getElementById('date-display');
+
+  // Update the innerHTML of the element with the current date
+  if (dataElement) {
+    dataElement.innerHTML = formattedDate;
+  }
+}
+
+// Call the funtion once to display immediately
+updateDate();
+// Update the date
+setInterval(updateDate, 6000);
