@@ -13,7 +13,7 @@ body {
     background-color: #ecf0f3;
 }
 
-nav{
+nav {
     width: 100%;
     padding: 12px 0;
     background: #ecf0f3;
@@ -29,20 +29,20 @@ nav .menu {
     align-items: center;
 }
 
-.menu .logo a{
+.menu .logo a {
     font-size: 24px;
     font-weight: 600;
     text-decoration: none;
     color: #31344b;
 }
 
-.menu ul{
+.menu ul {
     list-style: none;
     display: flex;
 
 }
 
-.menu ul a{
+.menu ul a {
     margin: 0 8px;
     text-decoration: none;
     font-size: 18px;
@@ -55,7 +55,7 @@ nav .menu {
     transition: all 0.3s ease;
 }
 
-.menu ul a:hover::before{
+.menu ul a:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -65,29 +65,29 @@ nav .menu {
     box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
 }
 
-nav ul a:hover{
+nav ul a:hover {
     color: #3498bd;
 }
 
-nav label.btn{
+nav label.btn {
     color: #31344b;
     font-size: 18px;
     cursor: pointer;
     display: none;
 }
 
-nav label.cancel{
+nav label.cancel {
     position: absolute;
     top: 25px;
     right: 30px;
 }
 
-#check{
+#check {
     display: none;
 }
 
-@media (max-width:940px){
-    .menu ul{
+@media (max-width:940px) {
+    .menu ul {
         display: block;
         position: fixed;
         top: 0;
@@ -102,7 +102,7 @@ nav label.cancel{
         transition: all 0.3s ease;
     }
 
-    .menu ul a{
+    .menu ul a {
         display: block;
         font-size: 23px;
         width: 100%;
@@ -111,49 +111,126 @@ nav label.cancel{
         text-align: center;
     }
 
-    .menu ul a:hover::before{
+    .menu ul a:hover::before {
         box-shadow: none;
     }
 
-    nav label.bars{
+    nav label.bars {
         display: block;
     }
 
-    #check:checked
-
-     #check:checked~label.bars{
+    #check:checked #check:checked~label.bars {
         display: none;
     }
 
-    #check:checked~label.cancel{
+    #check:checked~label.cancel {
         display: block;
     }
 
-    #check:checked~ul{
+    #check:checked~ul {
         left: 0;
     }
 }
 
+/* Main Section */
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Tools Container */
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card h3 {
+    margin-bottom: 15px;
+}
+
+.tool-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #ecf0f3;
+    color: #31344b;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.tool-card a:hover {
+    background: #005ed6;
+}
+
+@media (max-width:768px) {
+
+    main h1 {
+        font-size: 26px;
+    }
+
+    .tools-container {
+        gap: 15px;
+    }
+
+}
+
 /* Digital Clock */
 .container {
-  position: relative;
+    position: relative;
 
 }
 
 .clock-container {
-   padding: 10px;
-   border: 2px solid #333;
-   border-radius: 10px;
-   display: flex;
-   justify-content: space-between;
-   font-size: .85em;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: .85em;
 
 }
 
-.font-effect-emboss {
-  
+
+
+/* Footer */
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-#date-display {
-
+footer p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
